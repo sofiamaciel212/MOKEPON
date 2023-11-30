@@ -8,7 +8,6 @@ sectionReiniciar.style.display = "none"
 let botonReiniciar = document.getElementById("boton-reiniciar")
 
 let sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
-let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
 let inputHipodoge = document.getElementById("hipodoge")
 let inputCapipepo = document.getElementById("capipepo")
 let inputRatigueya = document.getElementById("ratigueya")
