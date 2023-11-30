@@ -35,11 +35,12 @@ body {
 }
 
 
-.tarjetas {
+.tarjetas, .tarjeras-ataques {
     display: flex;
     gap: 10px;
-    
+
 }
+
 .tarjeta-de-mokepon {
     width: 223px;
     height: 61px;
@@ -59,12 +60,13 @@ body {
 }
 .tarjeta-de-mokepon:hover {
     background: #ffffff;
-
+    color: #ff84ed;
 }
 
 #boton-mascota {
-    height: 51px;
-    width: 179px;
+    height: 60px;
+    width: 208px;
+    font-size: 17px;
     margin-top: 100px;
     border-radius: 40px;
     background: transparent;
@@ -72,11 +74,24 @@ body {
     color: white;
     font-family: "Press Start 2P";
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 6px 1px -2px rgba(0, 0, 0, 0.2), 0 0px 2px 0 rgba(0, 0, 0, 0.14), 0 8px 23px 0 rgba(1, 0, 0, 0.12)
 }
+#boton-mascota:hover, #boton-reiniciar:hover {
+    border: 1.7px solid white;
+    font-size: 16px;
+}
+
 
 input {
     display: none;
+}
+
+input:checked + label {
+    background: #ffffff;
+    color: #ff84ed;
 }
 
 #seleccionar-ataque {
@@ -97,11 +112,14 @@ input {
     border-color: transparent;
     text-shadow: 0px 6px 11px #282828;
 }
+.boton-de-ataque:hover {
+    font-size: 65px;
+}
 
 #mensajes{
-    width: 790px;
-    height: 119px;
-    margin-top: 32px;
+    width: 720px;
+    height: 70px;
+    margin-top: 39px;
     padding: 5px;
     font-size: 26px;
     color: #ff00b3;
@@ -117,15 +135,40 @@ input {
 }
 
 #boton-reiniciar {
+    margin-top: 14px;
+    height: 42px;
+    width: 179px;
+    font-size: 17px;
     border-radius: 40px;
     background: transparent;
     border: 3px solid white;
     color: white;
     font-family: "Press Start 2P";
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     box-shadow: 0 6px 1px -2px rgba(0, 0, 0, 0.2), 0 0px 2px 0 rgba(0, 0, 0, 0.14), 0 8px 23px 0 rgba(1, 0, 0, 0.12)
 }
 
 .ataques {
     display: grid;
+    grid-template-columns: 130px 130px;
+    color: #ffffff;
+}
+#vidas-jugador, #vidas-enemigo {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+.ataques-jugador, .ataques-enemigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 360px) {
+    .tarjetas, .tarjeras-ataques {
+        flex-direction: column;
+    }
 }
